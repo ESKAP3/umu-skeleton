@@ -7,7 +7,7 @@ export SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export WINEPREFIX="$SCRIPT_DIR/prefixes/xx"
 export PROTONPATH="$SCRIPT_DIR/runners/current"
 
-# Start the umu environment
+# Initialize the prefix environment
 umu-run ""
 
 # Wait for filesystem to exist
@@ -17,8 +17,7 @@ done
 
 sleep 1
 
-# Standard wine update/init
+# Standard wine prefix update/check
 umu-run wineboot -u
 
-sleep 0.5
 echo "Prefix initialized at $WINEPREFIX"

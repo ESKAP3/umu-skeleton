@@ -16,5 +16,6 @@ export PROTONPATH="$BASE_DIR/runners/current"    #Points to symlink for global r
 export VKD3D_SHADER_CACHE_PATH="$WINEPREFIX/vkd3d_cache_umu"
 mkdir -p "$VKD3D_SHADER_CACHE_PATH"
 
-# Launch
-umu-run "$WINEPREFIX/drive_c/Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe"
+# You can use an absolute path if you want
+umu-run "$WINEPREFIX/drive_c/Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe" #2>&1 | tee "$SCRIPT_DIR/last_run.log"   #Uncomment for log
+
