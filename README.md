@@ -1,5 +1,5 @@
 # umu-skeleton
-A lightweight, location-agnostic structure for managing Windows games using umu-launcher.
+A lightweight, location-agnostic system for managing Windows games using umu-launcher.
 
 dependencies: umu-launcher, and bash:)
 
@@ -20,12 +20,17 @@ dependencies: umu-launcher, and bash:)
   2. Update WINEPREFIX to match your prefix name.
   3. Paste the path to your game's .exe in the umu-run line.
 
-Note: If the scripts don't run, ensure they are executable by running 'chmod +x *.sh games/*.sh runners/*.sh' in the root folder.
+**Note:** If the scripts don't run, ensure they are executable by running this in the root folder:
+
+```bash
+chmod +x *.sh games/*.sh runners/*.sh
+```
 
 # Features
 
 Portable: Calculates paths relative to script location.
 Move the folder around to your heart's content, including external drives and other Linux machines. It will work as long as umu-launcher is installed.
+
 If a game acts up after moving to another drive/computer, point 'create_prefix.sh' to the prefix and run it again.
 Same goes for switching proton versions, not always needed, but fixes inconsistencies between how different versions handle a prefix.
 
