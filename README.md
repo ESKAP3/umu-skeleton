@@ -24,8 +24,8 @@ Note: If the scripts don't run, ensure they are executable by running 'chmod +x 
 
 # Features
 
-Portable: Uses BASE_DIR logic to calculate paths relative to the script location.
-You can just move the folder around to your heart's content, including external drives and other Linux machines. It will work as long as umu-launcher is installed.
+Portable: Calculates paths relative to the script location.
+You can move the folder around to your heart's content, including external drives and other Linux machines. It will work as long as umu-launcher is installed.
 If something is weird after, run 'umu-run wineboot -u' in the prefix.
 
 Lightweight: A directory structure with a few shell scripts. No overhead, no bullshit. Be your own manager.
@@ -33,6 +33,7 @@ Lightweight: A directory structure with a few shell scripts. No overhead, no bul
 Agnostic: Works with any Proton version dropped into the runners/ folder. (Wine works too but umu is made for Proton.)
 
 The logic is simple af, if something doesn't work, it's not the script's fault. (As long as you keep the structure and follow instructions)
+
 If you have any QoL suggestions, please make yourself heard!
 
 Enjoy!
