@@ -5,15 +5,15 @@ dependencies: umu-launcher
 
 # Quick Start
 
-- Initialize a Prefix:
-  1. Open `create_prefix.sh`.
-  2. Specify your desired name at `PREFIX_NAME`.
-  3. Run the script to build the environment. 
-  
 - Set Your Runner:
   1. Drop your Proton folders into the `runners/` directory. (Leave it empty to automatically download and use umu's Proton version and skip the next step.)
   2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually)
   (optionally there's `git_runner.sh` in `tools/` that currently pulls the latest GE-Proton.)
+  
+- Initialize a Prefix:
+  1. Open `create_prefix.sh`.
+  2. Specify your desired name at `PREFIX_NAME`.
+  3. Run the script to build the environment. 
   
 - Create a Launcher:
   1. Copy `games/game_template.sh`.
