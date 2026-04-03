@@ -7,8 +7,8 @@ dependencies: umu-launcher
 
 - Set Your Runner:
   1. Drop your Proton folders into the `runners/` directory. (Leave it empty to automatically download and use umu's Proton version and skip the next step.)
-  2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually)
-  (optionally there's `git_runner.sh` in `tools/` that currently pulls the latest GE-Proton.)
+  2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually) 
+  (optionally there's `git_runner.sh` in `tools/` that currently pulls the latest GE-Proton via github api.)
   
 - Initialize a Prefix:
   1. Open `create_prefix.sh`.
@@ -42,7 +42,9 @@ Logging: Every game script has a commented-out `tee` line. If a game fails to la
 1. Uncomment that line.
 2. Launch the game.
 3. Check the hidden `.logs/` folder for `last_run_PREFIXNAME.log`. 
-There's also an option to enable Proton's logs for deeper troubleshooting, also writes to `logs/`.
+There's also an option to enable Proton's logs for deeper troubleshooting, also writes to `.logs/`.
+
+There now is a `winecfg.sh` in `tools/`, you know the drill, requested feature.
 
 If you have any QoL suggestions, please make yourself heard!
 
