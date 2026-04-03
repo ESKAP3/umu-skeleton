@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # Get absolute path of the Games folder
-export SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
 export PREFIX_NAME="Cyberpunk"    #Change to desired name
 
 
-export WINEPREFIX="$SCRIPT_DIR/prefixes/$PREFIX_NAME"
+export WINEPREFIX="$BASE_DIR/prefixes/$PREFIX_NAME"
+
+[ -f "$BASE_DIR/global.conf" ] && source "$BASE_DIR/global.conf"
 
 # Initialize the environment
 umu-run ""

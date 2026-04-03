@@ -13,6 +13,7 @@ dependencies: umu-launcher
 - Set Your Runner:
   1. Drop your Proton folders into the `runners/` directory. (Leave it empty to automatically download and use umu's Proton version and skip the next step.)
   2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually)
+  (optionally there's `git_runner.sh` in `tools/` that currently pulls the latest GE-Proton.)
   
 - Create a Launcher:
   1. Copy `games/game_template.sh`.
@@ -22,7 +23,7 @@ dependencies: umu-launcher
 **Note:** If the scripts don't run, ensure they are executable by running this in the root folder:
 
 ```bash
-chmod +x *.sh games/*.sh runners/*.sh
+chmod +x *.sh games/*.sh tools/*.sh
 ```
 
 # Features
@@ -42,8 +43,6 @@ Logging: Every game script has a commented-out `tee` line. If a game fails to la
 2. Launch the game.
 3. Check the hidden `.logs/` folder for `last_run_PREFIXNAME.log`. 
 There's also an option to enable Proton's logs for deeper troubleshooting, also writes to `logs/`.
-
-The logic is simple af, if something doesn't work, it's not the script's fault. (As long as you keep the structure and follow instructions)
 
 If you have any QoL suggestions, please make yourself heard!
 
