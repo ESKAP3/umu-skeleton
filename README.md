@@ -1,9 +1,12 @@
+![Logic Audit](https://github.com/ESKAP3/umu-skeleton/actions/workflows/lint.yml/badge.svg)
 # umu-skeleton
 Who needs a game manager, you have a filesystem.
 
 dependencies: umu-launcher
 
 # Quick Start
+
+`git clone https://github.com/ESKAP3/umu-skeleton.git && cd umu-skeleton`
 
 - Set Your Runner:
   1. Drop your Proton folders into the `runners/` directory, or use `tools/git_runners.sh` to get one (requires curl).
@@ -39,7 +42,7 @@ Simple: Beginners can use it too, you might learn something.
 
 Global config and local overrides.
 
-There are now `winecfg.sh`, `explorer.sh` and `kill_game.sh` in `tools/` for easier configuration.
+There are now `winecfg.sh`, `explorer.sh` and `kill_game.sh` in `tools/` for easier management.
 
 Logging: Every game script has a commented-out `tee` line. If a game fails to launch:
 1. Uncomment that line.
