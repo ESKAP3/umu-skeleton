@@ -37,7 +37,9 @@ Lightweight: A directory structure with a few shell scripts. No overhead, no bul
 
 Simple: Beginners can use it too, you might learn something.
 
-There are now `winecfg.sh` and `explorer.sh` in `tools/` for easier configuration.
+Global config and local overrides.
+
+There are now `winecfg.sh`, `explorer.sh` and `kill_game.sh` in `tools/` for easier configuration.
 
 Logging: Every game script has a commented-out `tee` line. If a game fails to launch:
 1. Uncomment that line.

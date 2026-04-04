@@ -10,7 +10,7 @@ export LOG_DIR="$BASE_DIR/.logs"
 # mkdir -p "$LOG_DIR"  #Uncomment for log
 
 
-WINEPREFIX="$BASE_DIR/prefixes/Cyberpunk"    #CHANGE "Cyberpunk" TO YOUR PREFIX NAME
+WINEPREFIX="$BASE_DIR/prefixes/Cyberpunk"     #CHANGE "Cyberpunk" TO YOUR PREFIX NAME
 
 
 export WINEPREFIX="${WINEPREFIX%/}"
@@ -27,5 +27,16 @@ mkdir -p "$VKD3D_SHADER_CACHE_PATH"
 # That file doesn't need to be executable and shouldn't be run directly.
 [ -f "$BASE_DIR/global.conf" ] && source "$BASE_DIR/global.conf"
 
+#ENABLE_GAMESCOPE=1
+
+#GAMESCOPE_ARGS="-W 1920 -H 1080 -r5 -F fsr"
+
+# We use a conditional prefix so the script works eitherway
+if [ "$ENABLE_GAMESCOPE" = "1" ]; then
+    CMD_PREFIX="gamescope $GAMESCOPE_ARGS --"
+else
+    CMD_PREFIX=""
+fi
+
 # You can also use an absolute path if you want, but that breaks portability when moving the directory.
-umu-run "$WINEPREFIX/drive_c/Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe" #2>&1 | tee "$LOG_DIR/last_run_$PREFIX_NAME.log"    #Uncomment for log
+$CMD_PREFIX umu-run "$WINEPREFIX/drive_c/Games/Cyberpunk 2077/bin/x64/Cyberpunk2077.exe" #2>&1 | tee "$LOG_DIR/last_run_$PREFIX_NAME.log"    #Uncomment for log
