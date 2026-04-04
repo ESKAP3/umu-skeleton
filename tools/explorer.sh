@@ -13,4 +13,4 @@ export WINEPREFIX="${WINEPREFIX%/}"
 
 [ -f "$BASE_DIR/global.conf" ] && source "$BASE_DIR/global.conf"
 
-umu-run winecfg
+umu-run explorer

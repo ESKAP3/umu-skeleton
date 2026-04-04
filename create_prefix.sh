@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Get absolute path of the Games folder
-export BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
-export PREFIX_NAME="Cyberpunk"    #Change to desired name
+PREFIX_NAME="Cyberpunk"    #Change to desired name
 
 
 export WINEPREFIX="$BASE_DIR/prefixes/$PREFIX_NAME"

@@ -3,11 +3,11 @@
 # Local variable for calculation
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Exported for umu-run and child processes
-export BASE_DIR="$(dirname "$SCRIPT_DIR")"
+BASE_DIR="$(dirname "$SCRIPT_DIR")"
 
-export LOG_DIR="$BASE_DIR/.logs"    #Define the Log Directory
-mkdir -p "$LOG_DIR"
+#Define the Log Directory
+export LOG_DIR="$BASE_DIR/.logs"
+# mkdir -p "$LOG_DIR"  #Uncomment for log
 
 
 WINEPREFIX="$BASE_DIR/prefixes/Cyberpunk"    #CHANGE "Cyberpunk" TO YOUR PREFIX NAME
@@ -15,7 +15,8 @@ WINEPREFIX="$BASE_DIR/prefixes/Cyberpunk"    #CHANGE "Cyberpunk" TO YOUR PREFIX 
 
 export WINEPREFIX="${WINEPREFIX%/}"
 
-export PREFIX_NAME="${WINEPREFIX##*/}"     #name logs based on prefix
+#name logs based on prefix
+export PREFIX_NAME="${WINEPREFIX##*/}"
 
 # Shader cache setup (prevents clutter)
 export VKD3D_SHADER_CACHE_PATH="$WINEPREFIX/vkd3d_cache_umu"

@@ -6,9 +6,8 @@ dependencies: umu-launcher
 # Quick Start
 
 - Set Your Runner:
-  1. Drop your Proton folders into the `runners/` directory. (Leave it empty to automatically download and use umu's Proton version and skip the next step.)
+  1. Drop your Proton folders into the `runners/` directory, or use `tools/git_runners.sh` to get one (requires curl).
   2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually) 
-  (optionally there's `git_runner.sh` in `tools/` that currently pulls the latest GE-Proton via github api.)
   
 - Initialize a Prefix:
   1. Open `create_prefix.sh`.
@@ -26,25 +25,25 @@ dependencies: umu-launcher
 chmod +x *.sh games/*.sh tools/*.sh
 ```
 
+If a game acts up after moving to another drive/computer, point `create_prefix.sh` to the prefix and run it again.
+Same goes for switching proton versions, not always needed, but fixes inconsistencies between how different versions handle a prefix.
+
 # Features
 
 Portable: Calculates paths relative to script location.
 Move the folder around to your heart's content, including external drives and other Linux machines. It will work as long as umu-launcher is installed.
 
-If a game acts up after moving to another drive/computer, point `create_prefix.sh` to the prefix and run it again.
-Same goes for switching proton versions, not always needed, but fixes inconsistencies between how different versions handle a prefix.
-
 Lightweight: A directory structure with a few shell scripts. No overhead, no bullshit. Be your own manager.
 
-Agnostic: Works with any Proton version dropped into the runners/ folder. (Wine works too but umu is made for Proton.)
+Simple: Beginners can use it too, you might learn something.
+
+There are now `winecfg.sh` and `explorer.sh` in `tools/` for easier configuration.
 
 Logging: Every game script has a commented-out `tee` line. If a game fails to launch:
 1. Uncomment that line.
 2. Launch the game.
 3. Check the hidden `.logs/` folder for `last_run_PREFIXNAME.log`. 
-There's also an option to enable Proton's logs for deeper troubleshooting, also writes to `.logs/`.
-
-There now is a `winecfg.sh` in `tools/`, you know the drill, requested feature.
+There's also an option to enable Proton's logs for deeper troubleshooting in `global.conf`, also writes to `.logs/`.
 
 If you have any QoL suggestions, please make yourself heard!
 
