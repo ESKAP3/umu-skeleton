@@ -19,7 +19,7 @@ case $CHOICE in
         ;;
     2) 
         REPO="Etaash-mathamsetty/Proton"
-        FILTER=".tar.xz" # EA usually only has one main Linux asset
+        FILTER=".tar.xz" 
         ;;
     3) 
         REPO="CachyOS/proton-cachyos"
@@ -33,12 +33,12 @@ echo "--- Fetching latest release info for $REPO ---"
 # Get the latest release download URL from GitHub API
 REL_INFO=$(curl -s "https://api.github.com/repos/$REPO/releases/latest")
 
-# Enhanced Filter: Finds the asset that matches our REPO-specific FILTER
+# Filter
 DL_URL=$(echo "$REL_INFO" | grep "browser_download_url" | grep "$FILTER" | head -1 | cut -d '"' -f 4)
 
 if [ -z "$DL_URL" ]; then
     echo "Error: Could not find a valid download URL matching '$FILTER' for $REPO."
-    # Fallback for EA or GE if specific filter fails
+    # Fallback
     DL_URL=$(echo "$REL_INFO" | grep "browser_download_url" | grep -E ".tar.gz|.tar.xz" | head -1 | cut -d '"' -f 4)
     [ -z "$DL_URL" ] && exit 1
 fi
