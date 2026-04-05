@@ -14,7 +14,8 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
       - name: Run ShellCheck
-        uses: shell-check/shellcheck-action@v1
-        with:
-          options: -x -e SC1091
+        run: shellcheck -x -e SC1091 *.sh games/*.sh tools/*.sh
