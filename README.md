@@ -43,6 +43,7 @@ Simple: Beginners can use it too, you might learn something.
 Global config and local overrides.
 
 There are now `winecfg.sh`, `explorer.sh` and `kill_game.sh` in `tools/` for easier management.
+`tools/git_runners.sh` detects your x86_64 baseline to pull Proton versions optimized for your CPU.
 
 Logging: Every game script has a commented-out `tee` line. If a game fails to launch:
 1. Uncomment that line.
