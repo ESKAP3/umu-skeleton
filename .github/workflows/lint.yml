@@ -1,4 +1,4 @@
-name: Logic Audit
+name: Linting
 
 on:
   push:
