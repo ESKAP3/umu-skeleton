@@ -5,9 +5,9 @@ Who needs a game manager, you have a filesystem.
 dependencies: umu-launcher
 
 # Quick Start
-
-`git clone https://github.com/ESKAP3/umu-skeleton.git && cd umu-skeleton`
-
+```bash
+git clone https://github.com/ESKAP3/umu-skeleton.git && cd umu-skeleton
+```
 - Set Your Runner:
   1. Drop your Proton folders into the `runners/` directory, or use `tools/git_runners.sh` to get one (requires curl).
   2. Open `global.conf` and update `PROTONPATH` to point to your runner. (You can also set up each game individually) 

@@ -15,8 +15,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run ShellCheck
-        uses: ludeeus/action-shellcheck@master
+        uses: shell-check/shellcheck-action@v1
         with:
-          additional_files: |
-            *.sh
-          sc_options: '-x -e SC1091'
+          options: -x -e SC1091
