@@ -1,4 +1,4 @@
-![Logic Audit](https://github.com/ESKAP3/umu-skeleton/actions/workflows/lint.yml/badge.svg)
+![Linting](https://github.com/ESKAP3/umu-skeleton/actions/workflows/lint.yml/badge.svg)
 # umu-skeleton
 Who needs a game manager, you have a filesystem.
 
