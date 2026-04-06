@@ -22,6 +22,8 @@ git clone https://github.com/ESKAP3/umu-skeleton.git && cd umu-skeleton
   2. Update `WINEPREFIX` to match your prefix name.
   3. Paste the path to your game's .exe in the `umu-run` line.
 
+**Tip:** Open `global.conf` and look at the options, you can also override them per game.
+
 **Note:** If the scripts don't run, ensure they are executable by running this in the root folder:
 
 ```bash
@@ -43,7 +45,10 @@ Simple: Beginners can use it too, you might learn something.
 Global config and local overrides.
 
 There are now `winecfg.sh`, `explorer.sh` and `kill_game.sh` in `tools/` for easier management.
+
 `tools/git_runners.sh` detects your x86_64 baseline to pull Proton versions optimized for your CPU.
+
+Feralgamemode and Gamescope are integrated, meaning you can toggle and configure them easily.
 
 Logging: Every game script has a commented-out `tee` line. If a game fails to launch:
 1. Uncomment that line.
