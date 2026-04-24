@@ -14,14 +14,4 @@ export WINEPREFIX="$BASE_DIR/prefixes/$PREFIX_NAME"
 # Initialize the environment
 umu-run ""
 
-# Wait for filesystem to exist
-while [ ! -f "$WINEPREFIX/system.reg" ]; do
-    sleep 0.5
-done
-
-sleep 0.5
-
-# Standard wine prefix update/check
-umu-run wineboot -u
-
 echo "Prefix initialized at $WINEPREFIX"
